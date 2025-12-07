@@ -8,9 +8,6 @@ import java.util.Optional;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
-    
-    // Método para verificar existência de email (Regra: email deve ser único)
     boolean existsByEmail(String email);
-    
     Optional<Usuario> findByEmail(String email);
 }

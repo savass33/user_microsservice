@@ -16,7 +16,6 @@ public class UsuarioService {
     }
 
     public Usuario criar(Usuario usuario) {
-        // Regra: email deve ser único no sistema
         if (repository.existsByEmail(usuario.getEmail())) {
             throw new IllegalArgumentException("Já existe um usuário cadastrado com este e-mail.");
         }
